@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РКО для бизнеса: откройте счёт в банке за 1 день</title>
+    <style>
+        :root {
+            --primary: #0055cc;
+            --text: #333;
+            --border: #e0e0e0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+        body { line-height: 1.6; color: var(--text); background: #fff; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 80px 0; }
+        h2 { font-size: 2.5rem; margin-bottom: 15px; text-align: center; }
+        .subtitle { text-align: center; color: #666; max-width: 700px; margin: 0 auto 50px; }
+
+        /* Первый экран */
+        header {
+            background: linear-gradient(135deg, #003d99, #0055cc);
+            color: #fff;
+            padding: 130px 0;
+            text-align: center;
+        }
+        header h1 { font-size: 3.2rem; margin-bottom: 20px; font-weight: 700; }
+        header p { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9; }
+        .btn {
+            display: inline-block;
+            background: #ffce00;
+            color: #000;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); background: #ffcc00; }
+
+        /* Сетка банков */
+        .bank-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .bank-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .bank-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        .bank-logo {
+            height: 60px;
+            max-width: 180px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+        .bank-name { font-size: 1.15rem; font-weight: bold; margin-bottom: 15px; }
+        .bank-link {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .bank-card:hover .bank-link { background: #0044a3; }
+
+        /* Форма */
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 18px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button[type="submit"]:hover { background: #0044a3; }
+        .success-msg { color: green; text-align: center; margin-top: 15px; display: none; }
+        .error-msg { color: red; text-align: center; margin-top: 15px; display: none; }
+
+        footer { background: #222; color: #aaa; padding: 40px 0; text-align: center; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .btn { padding: 12px 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Первый экран -->
+    <header>
+        <div class="container">
+            <h1>РКО для бизнеса:<br>12 банков — один выбор</h1>
+            <p>Откройте расчётный счёт за 1 день у банка-партнёра. Без посредников и скрытых комиссий.</p>
+            <a href="#banks" class="btn">Выбрать банк</a>
+        </div>
+    </header>
+
+    <!-- Список банков -->
+    <section id="banks" class="section">
+        <div class="container">
+            <h2>Выберите банк</h2>
+            <p class="subtitle">Кликните по нужному банку — откроется страница оформления РКО на сайте банка.</p>
+            <div class="bank-grid">
+
+                <a href="https://t.fincpanetwork.ru/click/49306/417?erid=2W5zFHbppTA" target="_blank" class="bank-card">
+                    <img src="logos/ozon.png" alt="Озон Банк" class="bank-logo">
+                    <span class="bank-name">Озон Банк</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/382?erid=2VfnxvbSfAx" target="_blank" class="bank-card">
+                    <img src="logos/akbars.png" alt="АК БАРС" class="bank-logo">
+                    <span class="bank-name">АК БАРС</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/338?erid=2W5zFJhpPwv" target="_blank" class="bank-card">
+                    <img src="logos/alfa.png" alt="Альфа-Банк" class="bank-logo">
+                    <span class="bank-name">Альфа-Банк</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/473" target="_blank" class="bank-card">
+                    <img src="logos/vtb.png" alt="ВТБ" class="bank-logo">
+                    <span class="bank-name">ВТБ</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/580?erid=2W5zFK9vz9e" target="_blank" class="bank-card">
+                    <img src="logos/levoberezhny.png" alt="Левобережный банк" class="bank-logo">
+                    <span class="bank-name">Левобережный банк</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/354?erid=2W5zFFxcWrk" target="_blank" class="bank-card">
+                    <img src="logos/locko.png" alt="Локо-Банк" class="bank-logo">
+                    <span class="bank-name">Локо-Банк</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/607?erid=2W5zFHGayqj" target="_blank" class="bank-card">
+                    <img src="logos/otp.png" alt="ОТП Банк" class="bank-logo">
+                    <span class="bank-name">ОТП Банк</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/360?erid=2W5zFK8dcHf" target="_blank" class="bank-card">
+                    <img src="logos/psb.png" alt="Промсвязьбанк" class="bank-logo">
+                    <span class="bank-name">Промсвязьбанк</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/591?erid=2W5zFH4SETs" target="_blank" class="bank-card">
+                    <img src="logos/bank-spb.png" alt="Банк Санкт-Петербург" class="bank-logo">
+                    <span class="bank-name">Банк Санкт-Петербург</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/521?erid=2W5zFHssE24" target="_blank" class="bank-card">
+                    <img src="logos/rshb.png" alt="РСХБ" class="bank-logo">
+                    <span class="bank-name">РСХБ</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/617?erid=2W5zFK4SF8U" target="_blank" class="bank-card">
+                    <img src="logos/sovkom.png" alt="Совкомбанк" class="bank-logo">
+                    <span class="bank-name">Совкомбанк</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+                <a href="https://t.fincpanetwork.ru/click/49306/631?erid=2W5zFHvrcYQ" target="_blank" class="bank-card">
+                    <img src="logos/ubrir.png" alt="УБРиР" class="bank-logo">
+                    <span class="bank-name">УБРиР</span>
+                    <span class="bank-link">Оформить РКО</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма заявки -->
+    <section id="form" class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2>Оставьте заявку</h2>
+            <p class="subtitle">Мы бесплатно подберём банк под ваш бизнес и поможем с оформлением.</p>
+            <form id="lead-form" action="https://formspree.io/f/ВАША_ССЫЛКА" method="POST" class="form-wrapper">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 000-00-00">
+                </div>
+                <div class="form-group">
+                    <label for="type">Тип бизнеса</label>
+                    <select id="type" name="type" required>
+                        <option value="" disabled selected>Выберите тип</option>
+                        <option value="ИП">ИП</option>
+                        <option value="ООО">ООО</option>
+                        <option value="Самозанятый">Самозанятый</option>
+                    </select>
+                </div>
+                <button type="submit">Отправить заявку</button>
+                <p id="success-msg" class="success-msg">Спасибо! Заявка отправлена. Менеджер свяжется с вами в течение 15 минут.</p>
+                <p id="error-msg" class="error-msg">Ошибка отправки. Попробуйте позже.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 РКО для бизнеса. Все права защищены.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">Сайт носит информационный характер и не является публичной офертой.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('lead-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            const successMsg = document.getElementById('success-msg');
+            const errorMsg = document.getElementById('error-msg');
+
+            if (!document.getElementById('name').value || !document.getElementById('phone').value) {
+                errorMsg.style.display = 'block';
+                return;
+            }
+
+            btn.innerText = 'Отправка...';
+            btn.disabled = true;
+
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(() => {
+                successMsg.style.display = 'block';
+                this.reset();
+                setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
+            })
+            .catch(() => { errorMsg.style.display = 'block'; })
+            .finally(() => { btn.innerText = originalText; btn.disabled = false; });
+        });
+    </script>
+</body>
+</html>
